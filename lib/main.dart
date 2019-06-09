@@ -19,12 +19,85 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                height: 100.0,
-                width: 100.0,
-                color: Colors.white,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 80.0,
+                backgroundImage: AssetImage('images/5X5.jpg'),
+              ),
+              Text(
+                'Dedy Prasetyo H.',
+                style: TextStyle(
+                    fontSize: 35.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Pacifico'),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal[100],
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.grey[200],
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.public,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'http://mamenesia.com',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Source Sans Pro',
+                      color: Colors.teal.shade900,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 30.0,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+6287 838 530 721',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    'dedy.prasetyo.h@gmail.com',
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
+                      color: Colors.teal.shade900,
+                    ),
+                  ),
+                ),
               )
             ],
           ),
